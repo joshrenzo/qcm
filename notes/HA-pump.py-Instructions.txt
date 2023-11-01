@@ -1,0 +1,17 @@
+Instructions for using syringe pump code
+Only for use with Harvard Apparatus Pump 11 Pico Plus Elite Model
+
+example entry into command line terminal:
+-add '/dev/tty.usbmodemD3081841' -d 14.357 -ir 2000 -iru "ul/min" -st 10 
+
+^^
+Above command will communicate with syringe pump at process "/dev/tty.usbmodemD3081841"
+It tells the pump that a syringe of diameter 14.357mm is installed and to infuse at a 
+rate of 2000 uL/min for a time period of ten seconds
+
+where:
+-add is the usb port address on the computer, can be found by running /dev/tty to find port name
+-d is the syringe diameter in millimeters
+-ir is the infusion rate
+-iru is the infusion rate units
+-st is the amount of time you want the pipette to run
